@@ -1,0 +1,30 @@
+<%# coding: UTF-8 -%>
+<table id="login-box">
+  <tr>
+    <td colspan="2">
+      <div id="headline-container">
+        <strong><%= escape_html @organization %></strong>
+        <%= t.label.central_login_title %>
+      </div>
+    </td>
+  </tr>
+
+  <% if @message %>
+  <tr>
+    <td colspan="2" id="messagebox-container">
+      <div class="messagebox <%= escape_html @message[:type] %>">
+        <%= escape_html @message[:message] %>
+      </div>
+    </td>
+  </tr>
+  <% end %>
+
+  <tr>
+    <td id="logo-container">
+      <img id="logo" src="<%= escape_html @uri_path %>/themes/<%= @theme %>/logo.png" />
+    </td>
+    <td id="login-form-container">
+      <%= erb(:_login_form, :layout => false) %>
+    </td>
+  </tr>
+</table>
