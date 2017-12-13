@@ -8,6 +8,16 @@ https://github.com/rubycas/rubycas-server
 
 https://github.com/sg552/rubycas-server
 
+## 启动和停止
+
+默认的启动方式： bundle exec rubycas-server -c config.yml
+
+```
+nohup bundle exec rubycas-server -c config.yml &
+```
+
+可以使用 thin， unicorn 来跑。
+
 ## 说明
 
 官方的代码库有问题。　不能立刻使用。　需要严格按照这个来运行：
@@ -16,7 +26,6 @@ https://github.com/sg552/rubycas-server
 2. mysql 5.7 的版本已经兼容。修复了主键默认是null的问题。
 3. 修复了一系列的activerecord, mysql2 的驱动问题
 4. 避免了i18n, r18n 的问题
-
 
 
 注意：如果遇到　说找不到gem 'activerecord-mysql2-adapter' 的话，
