@@ -1,30 +1,109 @@
 <%# coding: UTF-8 -%>
-<table id="login-box">
+
+<!--
+  <table id="login-box">
   <tr>
-    <td colspan="2">
-      <div id="headline-container">
-        <strong><%= escape_html @organization %></strong>
-        <%= t.label.central_login_title %>
-      </div>
-    </td>
+  <td colspan="2">
+  <div id="headline-container">
+  <strong><%= escape_html @organization %></strong>
+  <%= t.label.central_login_title %>
+  </div>
+  </td>
   </tr>
 
   <% if @message %>
-  <tr>
+    <tr>
     <td colspan="2" id="messagebox-container">
-      <div class="messagebox <%= escape_html @message[:type] %>">
-        <%= escape_html @message[:message] %>
-      </div>
+    <div class="messagebox <%= escape_html @message[:type] %>">
+    <%= escape_html @message[:message] %>
+    </div>
     </td>
-  </tr>
+    </tr>
   <% end %>
 
   <tr>
-    <td id="logo-container">
-      <img id="logo" src="<%= escape_html @uri_path %>/themes/<%= @theme %>/logo.png" />
-    </td>
-    <td id="login-form-container">
-      <%= erb(:_login_form, :layout => false) %>
-    </td>
+  <td id="logo-container">
+  <img id="logo" src="<%= escape_html @uri_path %>/themes/<%= @theme %>/logo.png" />
+  </td>
+  <td id="login-form-container">
+  </td>
   </tr>
-</table>
+  </table>
+-->
+
+<div class="page_field">
+  <div class="login_box" style="">
+    <% if @message %>
+      <div class="messagebox <%= escape_html @message[:type] %>">
+        <%= escape_html @message[:message] %>
+      </div>
+    <% end %>
+
+    <div class="login_title" style ="">
+      登录
+    </div>
+    <div style="margin-top: 30px;">
+      <%= erb(:_login_form, :layout => false) %>
+    </div>
+  </div>
+</div>
+
+<style>
+.input_area{
+  width: 320px;
+  height: 36px;
+  border: 1px solid #4AA3FF;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #9B9B9B;
+  font-family: PingFang SC;
+  display: block;
+  padding-left: 10px;
+}
+.button{
+  width: 320px;
+  height: 42px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  font-family: PingFang SC;
+  display: block;
+  background-color: #ff8e4a;
+  border: none;
+}
+label{
+  margin-left: 17%;
+  padding: 10px;
+  display: inline-block;
+}
+body {
+  background-image: url("http://siweitech.b0.upaiyun.com/cms/2017-12-01-login_background.png");
+  border: 0;
+}
+.login_box {
+  height: 356px;
+  width: 516px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #CBCBCB;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 250px;
+}
+.login_title {
+  font-size: 24px;
+  color: #000000;
+  font-family: PingFang SC;
+  text-align: center;
+  padding-top: 10px;
+}
+div.mistake {
+  line-height: 32px;
+}
+div.messagebox {
+  padding: 5px 0;
+  padding-left: 0px;
+  margin: 0 auto;
+  width: 400px;
+}
+<style>
