@@ -4,6 +4,10 @@
 
 https://github.com/rubycas/rubycas-server
 
+## 参考项目:
+
+https://github.com/sg552/rubycas-server
+
 ## 说明
 
 官方的代码库有问题。　不能立刻使用。　需要严格按照这个来运行：
